@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Click Message</title>
+</head>
+<body>
+    <button id="button">Click Me!</button>
+    <div id="content"></div>
+    
+    <script>
+        const button = document.getElementById('button');
+        const content = document.getElementById('content');
+
+        function handleButtonClick() {
+            const messages = [
+                "Hello, I am Md. Badol Mia!",
+                "You clicked the button, hooray!"
+            ];
+            const randomIndex = Math.floor(Math.random() * messages.length);
+            const randomMessage = messages[randomIndex];
+
+
+            content.innerText = randomMessage;
+        }
+
+        button.addEventListener('click', handleButtonClick);
+    </script>
+</body>
+</html>

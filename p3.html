@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Swatch</title>
+</head>
+
+<body>
+    <img id="imageElement" src="/Images/image1.jpg" alt="Image 1">
+    <br>
+    <div class="buttonGroup">
+        <button id="image1Button">Show Image 1</button>
+        <button id="image2Button">Show Image 2</button>
+    </div>
+
+    <script>
+        const imageElement = document.getElementById('imageElement');
+        const image1Button = document.getElementById('image1Button');
+        const image2Button = document.getElementById('image2Button');
+
+        function handleImage1ButtonClick() {
+            imageElement.src = '/Images/image1.jpg';
+            imageElement.alt = 'Image 1';
+        }
+
+        function handleImage2ButtonClick() {
+            imageElement.src = '/Images/image2.jpg';
+            imageElement.alt = 'Image 2';
+        }
+
+        image1Button.addEventListener('click', handleImage1ButtonClick);
+        image2Button.addEventListener('click', handleImage2ButtonClick);
+    </script>
+
+    <style>
+        #imageElement {
+            object-fit: contain;
+            width: 100%;
+            height: auto;
+        }
+
+        .buttonGroup{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        button{
+            background-color: black;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 25px;
+            margin: 5px;
+        }
+    </style>
+</body>
+
+</html>

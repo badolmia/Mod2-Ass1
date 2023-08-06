@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button click count</title>
+</head>
+
+<body>
+    <button id="button">Click Me!</button>
+    <p id="display">Count: 0</p>
+
+    <script>
+        const button = document.getElementById('button');
+        const display = document.getElementById('display');
+
+        let count = 0;
+
+        function handleButtonClick() {
+            count++;
+
+            display.textContent = `Count: ${count}`;
+        }
+
+        button.addEventListener('click', handleButtonClick);
+    </script>
+</body>
+
+</html>
